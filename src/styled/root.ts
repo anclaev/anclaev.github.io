@@ -5,12 +5,6 @@ import FontFaces from './fonts'
 const RootStyle = createGlobalStyle`
     ${FontFaces}
 
-    body {
-        background: #111;
-        color: #fff;
-        font-family: 'Roboto Condensed';
-    }
-
     * {
         box-sizing: border-box;
         overflow-x: hidden;
@@ -23,37 +17,40 @@ const RootStyle = createGlobalStyle`
 
     body {
         margin: 0;
+        height: 1em;
+        min-height: 100vh;
+        font-family: 'Roboto Condensed';   
+        background: #111;
+        color: #fff;
+    }
+
+    .container {
+        position: relative;
+        padding: 0 80px;
         height: 100%;
     }
 
     input, button {
         padding: 0;
+        cursor: pointer;
         appearance: none;
         border: none;
         background: transparent;
-    }
-
-    h1 {
-        font: inherit;
-        margin: 0;
-    }
-
-    input {
-        cursor: pointer;
-        
-        &:focus {
-            outline: none;
-        }
-    }
-
-    button {
-        cursor: pointer;
         color: inherit;
         font-family: inherit;
         font-weight: inherit;
         font-size: inherit;
     }
 
+    input:focus {        
+        outline: none;
+    }
+
+
+    h1 {
+        font: inherit;
+        margin: 0;
+    }
 
     ::-webkit-scrollbar {
     width: 7px;

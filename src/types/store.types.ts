@@ -8,10 +8,12 @@ export interface Action {
 
 export type AppState = {
   lang: Lang
+  cursor: boolean
 }
 
 export interface AppAction extends Action {
   lang?: Lang
+  cursor?: boolean
 }
 
 export type Lang = 'ru' | 'en'

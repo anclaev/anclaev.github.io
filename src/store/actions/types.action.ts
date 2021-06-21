@@ -1,1 +1,2 @@
 export const APP_SELECT_LANG = 'APP_SELECT_LANG'
+export const APP_CHANGE_CURSOR = 'APP_CHANGE_CURSOR'

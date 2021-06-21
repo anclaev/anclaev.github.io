@@ -7,3 +7,8 @@ export interface IHelmet {
   keywords?: string
   og?: string
 }
+
+export interface ICursor {
+  x: number
+  y: number
+}
