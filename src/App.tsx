@@ -10,6 +10,7 @@ import { ICursor } from './types/components.types'
 
 import Helmet from './components/Helmet'
 import Cursor from './components/Cursor'
+import Background from './components/Background'
 
 const App: React.FC = () => {
   const { lang } = useSelector((state: State) => state.app)
@@ -34,6 +35,7 @@ const App: React.FC = () => {
       />
 
       <Cursor x={cursorState.x} y={cursorState.y} />
+      <Background />
     </div>
   )
 }
