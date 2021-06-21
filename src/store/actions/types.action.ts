@@ -1,0 +1,1 @@
+export const APP_SELECT_LANG = 'APP_SELECT_LANG'
