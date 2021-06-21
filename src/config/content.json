@@ -1,0 +1,18 @@
+{
+  "ru": {
+    "helmet": {
+      "title": "веб-разработка | anclaev",
+      "description": "Разработка прогрессивных веб-приложений",
+      "og": "Веб-дизайн",
+      "keywords": "веб-разработка, сайты, веб-дизайн"
+    }
+  },
+  "en": {
+    "helmet": {
+      "title": "web development | anclaev",
+      "description": "Developing progressive web applications",
+      "og": "Web design",
+      "keywords": "web development, websites, web design"
+    }
+  }
+}
