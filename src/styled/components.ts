@@ -9,9 +9,16 @@ export const StyledCursor = styled.div`
   z-index: 100;
   mix-blend-mode: difference;
   border-radius: 100px;
+  border: 1px solid #fff;
   background: #fff;
-  transition: transform .1s, background-color .3s;
+  transition: width .3s, height .3s, background .3s;
   pointer-events: none;
+
+  &[data-status=true] {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+  }
 `
 
 export const StyledBackground = styled.div<{ transparency: string }>`
@@ -64,6 +71,37 @@ export const StyledBackground = styled.div<{ transparency: string }>`
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+`
+
+export const StyledLogo = styled.svg`
+  width: 111px;
+  height: 22px;
+  path {
+    mix-blend-mode: difference;
+  }
+`
+
+export const StyledMenuWrapper = styled.button`
+  position: absolute;
+  padding: 10px 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+`
+
+export const StyledMenuIcon = styled.div`
+  position: relative;
+
+  & > span {
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #fff;
+
+    &:nth-child(2) {
+      margin: 7px 0;
     }
   }
 `

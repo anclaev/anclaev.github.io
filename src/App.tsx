@@ -12,16 +12,26 @@ import Helmet from './components/Helmet'
 import Cursor from './components/Cursor'
 import Background from './components/Background'
 
+import Header from './containers/Header'
+
 const App: React.FC = () => {
   const { lang } = useSelector((state: State) => state.app)
 
   const [cursorState, setCursorState] = useState<ICursor>({
     x: 0,
     y: 0,
+    status: false,
   })
 
-  const cursorMoveHandler = (e: any) =>
-    setCursorState({ x: e.clientX, y: e.clientY })
+  const cursorMoveHandler = (e: any) => {
+    let isActive = false
+    try {
+      isActive = e.target.className.includes('cursor')
+    } catch (e) {
+      console.log(e)
+    }
+    setCursorState({ x: e.clientX, y: e.clientY, status: isActive })
+  }
 
   return (
     <div className="container" onMouseMove={cursorMoveHandler}>
@@ -34,7 +44,9 @@ const App: React.FC = () => {
         og={data[lang].helmet.og}
       />
 
-      <Cursor x={cursorState.x} y={cursorState.y} />
+      <Header />
+
+      <Cursor x={cursorState.x} y={cursorState.y} status={cursorState.status} />
       <Background />
     </div>
   )

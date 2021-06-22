@@ -11,6 +11,7 @@ export interface IHelmet {
 export interface ICursor {
   x: number
   y: number
+  status: boolean
 }
 
 export interface IBackground {
