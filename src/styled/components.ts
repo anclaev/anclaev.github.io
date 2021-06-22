@@ -131,9 +131,32 @@ export const StyledMenuIcon = styled.div<{ status: boolean }>`
 export const StyledSocialLink = styled.a`
   padding: 10px;
   overflow: visible;
+  position: relative;
+  height: 40px;
+  width: 40px;
 
-  & > svg path {
-    fill: #fff;
-    mix-blend-mode: difference;
+  &:hover {
+    & svg {
+      width: 30px;
+      height: 30px;
+
+      & path {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  & > svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s;
+
+    & path {
+      fill: #fff;
+      mix-blend-mode: difference;
+      transition: 0.2s;
+    }
   }
 `
