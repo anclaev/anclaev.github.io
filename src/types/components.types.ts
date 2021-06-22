@@ -21,3 +21,8 @@ export interface IBackground {
   loop?: boolean
   muted?: boolean
 }
+
+export interface ISocialItem {
+  id: 'vk' | 'insta' | 'telegram' | 'github' | string
+  link: string
+}

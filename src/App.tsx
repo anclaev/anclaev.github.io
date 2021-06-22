@@ -13,6 +13,7 @@ import Cursor from './components/Cursor'
 import Background from './components/Background'
 
 import Header from './containers/Header'
+import Social from './containers/Social'
 
 const App: React.FC = () => {
   const { lang } = useSelector((state: State) => state.app)
@@ -28,7 +29,7 @@ const App: React.FC = () => {
     try {
       isActive = e.target.className.includes('cursor')
     } catch (e) {
-      console.log(e)
+      isActive = true
     }
     setCursorState({ x: e.clientX, y: e.clientY, status: isActive })
   }
@@ -45,6 +46,7 @@ const App: React.FC = () => {
       />
 
       <Header />
+      <Social items={data['social']} />
 
       <Cursor x={cursorState.x} y={cursorState.y} status={cursorState.status} />
       <Background />

@@ -127,3 +127,13 @@ export const StyledMenuIcon = styled.div<{ status: boolean }>`
     }
   }
 `
+
+export const StyledSocialLink = styled.a`
+  padding: 10px;
+  overflow: visible;
+
+  & > svg path {
+    fill: #fff;
+    mix-blend-mode: difference;
+  }
+`

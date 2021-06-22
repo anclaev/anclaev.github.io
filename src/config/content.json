@@ -14,5 +14,23 @@
       "og": "Web design",
       "keywords": "web development, websites, web design"
     }
-  }
+  },
+  "social": [
+    {
+      "id": "insta",
+      "link": "https://www.instagram.com/anclaev/"
+    },
+    {
+      "id": "github",
+      "link": "https://github.com/anclaev"
+    },
+    {
+      "id": "telegram",
+      "link": "https://t.me/anclaev"
+    },
+    {
+      "id": "vk",
+      "link": "https://vk.com/anclaev"
+    }
+  ]
 }
