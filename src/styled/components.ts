@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const StyledCursor = styled.div`
   position: fixed;
@@ -9,7 +9,7 @@ export const StyledCursor = styled.div`
   z-index: 100;
   mix-blend-mode: difference;
   border-radius: 100px;
-  border: 1px solid #fff;
+  border: 1px solid rgba(255,255,255, 0.5);
   background: #fff;
   transition: width .3s, height .3s, background .3s;
   pointer-events: none;
@@ -85,23 +85,45 @@ export const StyledLogo = styled.svg`
 
 export const StyledMenuWrapper = styled.button`
   position: absolute;
+  overflow: visible;
   padding: 10px 0;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
 `
 
-export const StyledMenuIcon = styled.div`
+export const StyledMenuIcon = styled.div<{ status: boolean }>`
   position: relative;
+  overflow: visible;
 
   & > span {
     display: block;
     width: 50px;
     height: 1px;
-    background-color: #fff;
+    background: #fff;
+    transition: 0.2s;
+
+    ${(props) =>
+      props.status
+        ? css`
+            &:first-child {
+              transform: rotate(45deg) translateX(1px);
+            }
+
+            &:last-child {
+              transform: rotate(-45deg) translateX(1px);
+            }
+          `
+        : ''}
 
     &:nth-child(2) {
-      margin: 7px 0;
+      margin: ${(props) => (props.status ? '0' : '7px 0')};
+      ${(props) =>
+        props.status
+          ? css`
+              opacity: 0;
+            `
+          : ''}
     }
   }
 `
