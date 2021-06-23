@@ -15,6 +15,10 @@ import Background from './components/Background'
 import Header from './containers/Header'
 import Social from './containers/Social'
 
+import Home from './pages/Home.page'
+
+import { StyledWrapper } from './styled/containers'
+
 const App: React.FC = () => {
   const { lang } = useSelector((state: State) => state.app)
 
@@ -35,7 +39,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="wrapper" onMouseMove={cursorMoveHandler}>
+    <StyledWrapper onMouseMove={cursorMoveHandler}>
       <Style />
       <Helmet
         lang={lang}
@@ -48,9 +52,14 @@ const App: React.FC = () => {
       <Header />
       <Social items={data['social']} />
 
+      <Home
+        title={data[lang].pages.home.title}
+        subtitle={data[lang].pages.home.subtitle}
+      />
+
       <Cursor x={cursorState.x} y={cursorState.y} status={cursorState.status} />
       <Background />
-    </div>
+    </StyledWrapper>
   )
 }
 

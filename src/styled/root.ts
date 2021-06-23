@@ -15,18 +15,17 @@ const RootStyle = createGlobalStyle`
         }
     }
 
+    html {
+        font-size: 15px;
+    }
+
     body {
         margin: 0;
         height: 1em;
         min-height: 100vh;
         font-family: 'Roboto Condensed';   
-        font-size: 15px;
         background: #111;
         color: #fff;
-    }
-
-    .wrapper {
-        height: 100%;
     }
 
     .logo {
@@ -74,31 +73,31 @@ const RootStyle = createGlobalStyle`
     }
 
     @media (max-width: 1250px) {
-        body {
+        html {
             font-size: 14px;
         }
     }
 
     @media (max-width: 1120px) {
-        body {
+        html {
             font-size: 13px;
         }
     }
 
     @media (max-width: 1040px) {
-        body {
+        html {
             font-size: 12px;
         }
     }
 
     @media (max-width: 992px) {
-        body {
+        html {
             font-size: 24px;
         }
     }
 
     @media (max-width: 320px) {
-        body {
+        html {
             font-size: 20px;
         }
     }

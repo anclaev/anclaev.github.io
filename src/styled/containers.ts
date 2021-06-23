@@ -22,8 +22,21 @@ export const StyledHeader = styled.header`
   display: flex;
 
   @media (max-width: 992px) {
-    left: 2.25rem;
-    top: 2.667rem;
-    right: 2.25rem;
+    left: 1.25rem;
+    top: 1.667rem;
+    right: 1.25rem;
+  }
+`
+
+export const StyledWrapper = styled.div`
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7.083rem 12.5%;
+
+  @media (max-width: 992px) {
+    padding: 1.667rem 1.25rem;
   }
 `
