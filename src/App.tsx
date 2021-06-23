@@ -35,7 +35,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="container" onMouseMove={cursorMoveHandler}>
+    <div className="wrapper" onMouseMove={cursorMoveHandler}>
       <Style />
       <Helmet
         lang={lang}

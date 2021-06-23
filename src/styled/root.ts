@@ -20,14 +20,25 @@ const RootStyle = createGlobalStyle`
         height: 1em;
         min-height: 100vh;
         font-family: 'Roboto Condensed';   
+        font-size: 15px;
         background: #111;
         color: #fff;
     }
 
-    .container {
-        position: relative;
-        padding: 0 80px;
+    .wrapper {
         height: 100%;
+    }
+
+    .logo {
+        height: inherit;
+
+        & svg {
+            height: inherit;
+        }
+
+        path {
+            mix-blend-mode: difference;
+        }
     }
 
     input, button {
@@ -60,6 +71,36 @@ const RootStyle = createGlobalStyle`
     ::-webkit-scrollbar-thumb {
         background: #111;
         opacity: 0.5;
+    }
+
+    @media (max-width: 1250px) {
+        body {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 1120px) {
+        body {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 1040px) {
+        body {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        body {
+            font-size: 24px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        body {
+            font-size: 20px;
+        }
     }
 `
 

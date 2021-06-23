@@ -9,14 +9,15 @@ export const StyledCursor = styled.div`
   z-index: 100;
   mix-blend-mode: difference;
   border-radius: 100px;
-  border: 1px solid rgba(255,255,255, 0.5);
+  border: 1px solid hsla(0,0%,100%,.4);
   background: #fff;
+  mix-blend-mode: difference;
   transition: width .3s, height .3s, background .3s;
   pointer-events: none;
 
   &[data-status=true] {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     background: transparent;
   }
 `
@@ -75,14 +76,6 @@ export const StyledBackground = styled.div<{ transparency: string }>`
   }
 `
 
-export const StyledLogo = styled.svg`
-  width: 111px;
-  height: 22px;
-  path {
-    mix-blend-mode: difference;
-  }
-`
-
 export const StyledMenuWrapper = styled.button`
   position: absolute;
   overflow: visible;
@@ -129,18 +122,16 @@ export const StyledMenuIcon = styled.div<{ status: boolean }>`
 `
 
 export const StyledSocialLink = styled.a`
-  padding: 10px;
+  padding: 35px 30px;
   overflow: visible;
   position: relative;
-  height: 40px;
-  width: 40px;
 
   &:hover {
     & svg {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
 
-      & path {
+      path {
         opacity: 0.7;
       }
     }
@@ -152,6 +143,8 @@ export const StyledSocialLink = styled.a`
     left: 50%;
     transform: translate(-50%, -50%);
     transition: 0.2s;
+    width: 18px;
+    height: 18px;
 
     & path {
       fill: #fff;

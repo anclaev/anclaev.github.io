@@ -1,20 +1,29 @@
 import styled from 'styled-components'
 
-export const StyledHeader = styled.header`
-  position: relative;
-  font-size: 18px;
-  margin: 3.5em 0;
-  overflow: visible;
-`
-
 export const StyledSocial = styled.div`
-  position: fixed;
-  font-size: 18px;
-  bottom: 3.5em;
+  position: absolute;
+  left: calc(3.333rem - 18px);
+  bottom: calc(2.917rem - 25px);
   display: flex;
   flex-direction: column-reverse;
 
-  & > a:not(:first-child) {
-    margin-bottom: 2em;
+  @media (max-width: 992px) {
+    display: none;
+  }
+`
+
+export const StyledHeader = styled.header`
+  position: absolute;
+  left: 3.333rem;
+  top: 2.917rem;
+  right: 3.333rem;
+  height: 18px;
+  overflow: visible;
+  display: flex;
+
+  @media (max-width: 992px) {
+    left: 2.25rem;
+    top: 2.667rem;
+    right: 2.25rem;
   }
 `
