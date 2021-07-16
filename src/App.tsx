@@ -11,6 +11,7 @@ import { ICursor } from './types/components.types'
 import Helmet from './components/Helmet'
 import Cursor from './components/Cursor'
 import Background from './components/Background'
+import Analytics from './components/Analytics'
 
 import Header from './containers/Header'
 import Social from './containers/Social'
@@ -59,6 +60,7 @@ const App: React.FC = () => {
 
       <Cursor x={cursorState.x} y={cursorState.y} status={cursorState.status} />
       <Background />
+      <Analytics />
     </StyledWrapper>
   )
 }
