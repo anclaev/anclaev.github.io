@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const StyledSocial = styled.div`
   position: absolute;
@@ -40,3 +40,5 @@ export const StyledWrapper = styled.div`
     padding: 1.667rem 1.25rem;
   }
 `
+
+export const StyledMenu = styled.div``

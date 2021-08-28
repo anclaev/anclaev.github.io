@@ -1,24 +1,25 @@
-import { useSelector } from 'react-redux'
-import { useState } from 'react'
+import { useSelector } from "react-redux"
+import { useState } from "react"
 
-import data from './config/content.json'
+import data from "./config/content.json"
 
-import Style from './styled/root'
+import Style from "./styled/root"
 
-import { State } from './types/store.types'
-import { ICursor } from './types/components.types'
+import { State } from "./types/store.types"
+import { ICursor } from "./types/components.types"
 
-import Helmet from './components/Helmet'
-import Cursor from './components/Cursor'
-import Background from './components/Background'
-import Analytics from './components/Analytics'
+import Helmet from "./components/Helmet"
+import Cursor from "./components/Cursor"
+import Background from "./components/Background"
+import Analytics from "./components/Analytics"
 
-import Header from './containers/Header'
-import Social from './containers/Social'
+import Header from "./containers/Header"
+import Social from "./containers/Social"
+import Menu from "./containers/Menu"
 
-import Home from './pages/Home.page'
+import Home from "./pages/Home.page"
 
-import { StyledWrapper } from './styled/containers'
+import { StyledWrapper } from "./styled/containers"
 
 const App: React.FC = () => {
   const { lang } = useSelector((state: State) => state.app)
@@ -32,7 +33,7 @@ const App: React.FC = () => {
   const cursorMoveHandler = (e: any) => {
     let isActive = false
     try {
-      isActive = e.target.className.includes('cursor')
+      isActive = e.target.className.includes("cursor")
     } catch (e) {
       isActive = true
     }
@@ -51,13 +52,14 @@ const App: React.FC = () => {
       />
 
       <Header />
-      <Social items={data['social']} />
+      <Social items={data["social"]} />
 
       <Home
         title={data[lang].pages.home.title}
         subtitle={data[lang].pages.home.subtitle}
       />
 
+      <Menu />
       <Cursor x={cursorState.x} y={cursorState.y} status={cursorState.status} />
       <Background />
       <Analytics />
