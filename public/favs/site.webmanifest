@@ -1,11 +1,13 @@
 {
   "name": "Web-development",
   "short_name": "anclaev",
+  "start_url": "../index.html",
   "icons": [
     {
       "src": "/favs/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/favs/android-chrome-512x512.png",

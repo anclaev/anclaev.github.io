@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components"
 
-import FontFaces from './fonts'
+import FontFaces from "./fonts"
 
 const RootStyle = createGlobalStyle`
     ${FontFaces}
@@ -26,6 +26,10 @@ const RootStyle = createGlobalStyle`
         font-family: 'Roboto Condensed';   
         background: #111;
         color: #fff;
+    }
+
+    .app {
+        height: 100%;
     }
 
     .logo {
