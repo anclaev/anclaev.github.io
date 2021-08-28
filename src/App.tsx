@@ -1,5 +1,9 @@
 import { useSelector } from "react-redux"
 import { useState } from "react"
+import { IntlProvider } from "react-intl"
+
+import LOCALES from "./i18n/locales"
+import messages from "./i18n/messages"
 
 import data from "./config/content.json"
 
@@ -45,27 +49,37 @@ const App: React.FC = () => {
 
   return (
     <StyledWrapper onMouseMove={cursorMoveHandler}>
-      <Style />
-      <Helmet
-        lang={lang}
-        description={data[lang].helmet.description}
-        title={data[lang].helmet.title}
-        keywords={data[lang].helmet.keywords}
-        og={data[lang].helmet.og}
-      />
+      <IntlProvider
+        messages={messages[lang]}
+        locale={lang}
+        defaultLocale={LOCALES.ENGLISH}
+      >
+        <Style />
+        <Helmet
+          lang={lang}
+          description={data[lang].helmet.description}
+          title={data[lang].helmet.title}
+          keywords={data[lang].helmet.keywords}
+          og={data[lang].helmet.og}
+        />
 
-      <Header status={menu} setStatus={menuStatusHandler} />
-      <Social items={data["social"]} status={menu} />
+        <Header status={menu} setStatus={menuStatusHandler} />
+        <Social items={data["social"]} status={menu} />
 
-      <Home
-        title={data[lang].pages.home.title}
-        subtitle={data[lang].pages.home.subtitle}
-      />
+        <Home
+          title={data[lang].pages.home.title}
+          subtitle={data[lang].pages.home.subtitle}
+        />
 
-      <Menu status={menu} />
-      <Cursor x={cursorState.x} y={cursorState.y} status={cursorState.status} />
-      <Background />
-      <Analytics />
+        <Menu status={menu} />
+        <Cursor
+          x={cursorState.x}
+          y={cursorState.y}
+          status={cursorState.status}
+        />
+        <Background />
+        <Analytics />
+      </IntlProvider>
     </StyledWrapper>
   )
 }
