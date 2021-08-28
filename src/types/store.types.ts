@@ -1,5 +1,8 @@
+import { RouterState } from "connected-react-router"
+
 export type State = {
   app: AppState
+  router: RouterState
 }
 
 export interface Action {
@@ -16,4 +19,4 @@ export interface AppAction extends Action {
   cursor?: boolean
 }
 
-export type Lang = 'ru' | 'en'
+export type Lang = "ru" | "en"

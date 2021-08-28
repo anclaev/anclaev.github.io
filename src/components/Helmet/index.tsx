@@ -1,21 +1,33 @@
-import { Helmet as Head } from 'react-helmet'
+import { Helmet as Head } from "react-helmet"
+import { useIntl } from "react-intl"
 
-import { IHelmet } from '../../types/components.types'
+import { IHelmet } from "../../types/components.types"
 
-const Helmet: React.FC<IHelmet> = (props) => (
-  <Head>
-    <html lang={props.lang} />
-    <meta name="description" content={props.description} />
-    <meta name="keywords" content={props.keywords} />
-    <meta property="og:description" content={props.og} />
-    <meta
-      property="og:locale"
-      content={
-        props.lang ? props.lang + '_' + props.lang.toUpperCase() : undefined
-      }
-    />
-    <title>{props.title}</title>
-  </Head>
-)
+const Helmet: React.FC<IHelmet> = ({ lang }) => {
+  const intl = useIntl()
+
+  return (
+    <Head>
+      <html lang={lang} />
+      <meta
+        name="description"
+        content={intl.formatMessage({ id: "helmet_description" })}
+      />
+      <meta
+        name="keywords"
+        content={intl.formatMessage({ id: "helmet_keywords" })}
+      />
+      <meta
+        property="og:description"
+        content={intl.formatMessage({ id: "helmet_og" })}
+      />
+      <meta
+        property="og:locale"
+        content={lang ? lang + "_" + lang.toUpperCase() : undefined}
+      />
+      <title>{intl.formatMessage({ id: "helmet_title" })}</title>
+    </Head>
+  )
+}
 
 export default Helmet

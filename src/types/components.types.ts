@@ -1,11 +1,7 @@
-import { Lang } from './store.types'
+import { Lang } from "./store.types"
 
 export interface IHelmet {
-  lang?: Lang
-  title?: string
-  description?: string
-  keywords?: string
-  og?: string
+  lang: Lang
 }
 
 export interface ICursor {
@@ -23,6 +19,6 @@ export interface IBackground {
 }
 
 export interface ISocialItem {
-  id: 'vk' | 'insta' | 'telegram' | 'github' | string
+  id: "vk" | "insta" | "telegram" | "github" | string
   link: string
 }

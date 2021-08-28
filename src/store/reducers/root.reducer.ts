@@ -1,9 +1,12 @@
-import { combineReducers } from 'redux'
+import { connectRouter } from "connected-react-router"
+import { combineReducers } from "redux"
 
-import AppReducer from './app.reducer'
+import AppReducer from "./app.reducer"
 
-const RootReducer = combineReducers({
-  app: AppReducer,
-})
+const rootReducer = (history: any) =>
+  combineReducers({
+    router: connectRouter(history),
+    app: AppReducer,
+  })
 
-export default RootReducer
+export default rootReducer

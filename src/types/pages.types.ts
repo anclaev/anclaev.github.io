@@ -1,4 +1,7 @@
+import { IntlShape } from "react-intl"
+
 export interface IPage {
-  title: string
-  subtitle: string
+  dispatch: any
+  location: any
+  intl: IntlShape
 }
