@@ -56,16 +56,45 @@ export const StyledWrapper = styled.div`
 `
 
 export const StyledMenu = styled.div<IMenu>`
-  position: absolute;
+  position: fixed;
   z-index: 6;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
   top: 0;
   left: 0;
-  right: 0;
 
   width: 100%;
   height: ${(props) => (props.status ? "100%" : 0)};
 
-  transition: 0.3s;
+  transition: 0.7s;
   background: #fff;
+  color: #000;
+
+  &,
+  & > div {
+    overflow: hidden;
+  }
+
+  & > div {
+    width: 100%;
+    height: 100%;
+    padding: 7rem 12.5%;
+  }
+
+  @media (max-width: 992px) {
+    &,
+    & > div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & > div {
+      flex: 1 1;
+      justify-content: center;
+      padding: 1.6rem 1.25rem;
+    }
+  }
 `

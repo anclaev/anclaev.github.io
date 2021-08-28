@@ -2,6 +2,7 @@ import { ISocialItem } from "./components.types"
 
 export interface ISocial extends IMenu {
   items: ISocialItem[]
+  id?: string
 }
 
 export interface IMenu {

@@ -15,7 +15,7 @@ const renderSocialLinks = (items: ISocialItem[]) => {
 }
 
 const Social: React.FC<ISocial> = (props) => (
-  <StyledSocial status={props.status}>
+  <StyledSocial status={props.status} id={props.id}>
     {renderSocialLinks(props.items)}
   </StyledSocial>
 )
