@@ -1,11 +1,20 @@
 import styled from "styled-components"
 
-export const StyledSocial = styled.div`
+import { IMenu } from "../types/containers.types"
+
+export const StyledSocial = styled.div<IMenu>`
   position: absolute;
-  left: calc(3.333rem - 18px);
-  bottom: calc(2.917rem - 25px);
   display: flex;
   flex-direction: column-reverse;
+
+  left: calc(3.333rem - 18px);
+  bottom: calc(2.917rem - 25px);
+
+  z-index: 7;
+
+  & path {
+    fill: ${(props) => (props.status ? "#000" : "#fff")} !important;
+  }
 
   @media (max-width: 992px) {
     display: none;
@@ -26,6 +35,11 @@ export const StyledHeader = styled.header`
     top: 1.667rem;
     right: 1.25rem;
   }
+
+  & svg {
+    mix-blend-mode: difference;
+    z-index: 7;
+  }
 `
 
 export const StyledWrapper = styled.div`
@@ -41,4 +55,17 @@ export const StyledWrapper = styled.div`
   }
 `
 
-export const StyledMenu = styled.div``
+export const StyledMenu = styled.div<IMenu>`
+  position: absolute;
+  z-index: 6;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: ${(props) => (props.status ? "100%" : 0)};
+
+  transition: 0.3s;
+  background: #fff;
+`

@@ -1,10 +1,8 @@
-import { useState } from 'react'
+import { StyledMenuIcon, StyledMenuWrapper } from "../../styled/components"
 
-import { StyledMenuIcon, StyledMenuWrapper } from '../../styled/components'
+import { IMenuProps } from "../../types/containers.types"
 
-const MenuIcon: React.FC = () => {
-  const [status, setStatus] = useState(false)
-
+const MenuIcon: React.FC<IMenuProps> = ({ status, setStatus }) => {
   const changeMenuStatus = () => setStatus(!status)
 
   return (

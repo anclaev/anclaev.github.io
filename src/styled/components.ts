@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components"
 
 export const StyledCursor = styled.div`
   position: fixed;
@@ -44,7 +44,7 @@ export const StyledBackground = styled.div<{ transparency: string }>`
   }
 
   &:after {
-    content: '';
+    content: "";
     background: #000;
     opacity: ${(props) => props.transparency};
     bottom: 0;
@@ -83,6 +83,7 @@ export const StyledMenuWrapper = styled.button`
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 7;
 `
 
 export const StyledMenuIcon = styled.div<{ status: boolean }>`
@@ -93,7 +94,7 @@ export const StyledMenuIcon = styled.div<{ status: boolean }>`
     display: block;
     width: 50px;
     height: 1px;
-    background: #fff;
+    background: ${(props) => (props.status ? "#000" : "#fff")};
     transition: 0.2s;
 
     ${(props) =>
@@ -107,16 +108,16 @@ export const StyledMenuIcon = styled.div<{ status: boolean }>`
               transform: rotate(-45deg) translateX(1px);
             }
           `
-        : ''}
+        : ""}
 
     &:nth-child(2) {
-      margin: ${(props) => (props.status ? '0' : '7px 0')};
+      margin: ${(props) => (props.status ? "0" : "7px 0")};
       ${(props) =>
         props.status
           ? css`
               opacity: 0;
             `
-          : ''}
+          : ""}
     }
   }
 `
@@ -159,7 +160,7 @@ export const StyledPageTitle = styled.div`
   max-width: 60%;
   white-space: pre-line;
 
-  font-family: 'Bebas Neue';
+  font-family: "Bebas Neue";
   text-transform: uppercase;
   font-size: 3.75rem;
   line-height: 1.111111111111111;

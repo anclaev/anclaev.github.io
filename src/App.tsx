@@ -23,6 +23,7 @@ import { StyledWrapper } from "./styled/containers"
 
 const App: React.FC = () => {
   const { lang } = useSelector((state: State) => state.app)
+  const [menu, setMenu] = useState<boolean>(false)
 
   const [cursorState, setCursorState] = useState<ICursor>({
     x: 0,
@@ -40,6 +41,8 @@ const App: React.FC = () => {
     setCursorState({ x: e.clientX, y: e.clientY, status: isActive })
   }
 
+  const menuStatusHandler = (status: boolean) => setMenu(status)
+
   return (
     <StyledWrapper onMouseMove={cursorMoveHandler}>
       <Style />
@@ -51,15 +54,15 @@ const App: React.FC = () => {
         og={data[lang].helmet.og}
       />
 
-      <Header />
-      <Social items={data["social"]} />
+      <Header status={menu} setStatus={menuStatusHandler} />
+      <Social items={data["social"]} status={menu} />
 
       <Home
         title={data[lang].pages.home.title}
         subtitle={data[lang].pages.home.subtitle}
       />
 
-      <Menu />
+      <Menu status={menu} />
       <Cursor x={cursorState.x} y={cursorState.y} status={cursorState.status} />
       <Background />
       <Analytics />

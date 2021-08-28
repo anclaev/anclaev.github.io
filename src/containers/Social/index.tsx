@@ -1,9 +1,9 @@
-import SocialItem from '../../components/SocialItem'
+import SocialItem from "../../components/SocialItem"
 
-import { ISocial } from '../../types/containers.types'
-import { ISocialItem } from '../../types/components.types'
+import { ISocial } from "../../types/containers.types"
+import { ISocialItem } from "../../types/components.types"
 
-import { StyledSocial } from '../../styled/containers'
+import { StyledSocial } from "../../styled/containers"
 
 const renderSocialLinks = (items: ISocialItem[]) => {
   let links: any = []
@@ -15,7 +15,9 @@ const renderSocialLinks = (items: ISocialItem[]) => {
 }
 
 const Social: React.FC<ISocial> = (props) => (
-  <StyledSocial>{renderSocialLinks(props.items)}</StyledSocial>
+  <StyledSocial status={props.status}>
+    {renderSocialLinks(props.items)}
+  </StyledSocial>
 )
 
 export default Social

@@ -1,12 +1,14 @@
-import { StyledHeader } from '../../styled/containers'
+import { StyledHeader } from "../../styled/containers"
 
-import Logo from '../../components/Logo'
-import Menu from '../../components/MenuIcon'
+import { IMenuProps } from "../../types/containers.types"
 
-const Header: React.FC = () => (
+import Logo from "../../components/Logo"
+import Menu from "../../components/MenuIcon"
+
+const Header: React.FC<IMenuProps> = (props) => (
   <StyledHeader>
     <Logo />
-    <Menu />
+    <Menu {...props} />
   </StyledHeader>
 )
 
