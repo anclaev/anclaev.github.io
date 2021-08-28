@@ -33,7 +33,7 @@ const PageProvider: React.FC<IPage> = (props) => {
         </Route>
       </Switch>
 
-      <Menu status={props.menuStatus} />
+      <Menu status={props.menuStatus} dispatch={dispatch} />
       <Cursor
         x={props.cursor.x}
         y={props.cursor.y}

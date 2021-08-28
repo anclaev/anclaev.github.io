@@ -79,6 +79,10 @@ export const StyledMenu = styled.div<IMenu>`
   }
 
   & > div {
+    position: relative;
+  }
+
+  & > div {
     width: 100%;
     height: 100%;
     padding: 7rem 12.5%;

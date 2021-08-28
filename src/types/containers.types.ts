@@ -1,5 +1,6 @@
 import { ICursor, ISocialItem } from "./components.types"
 import { Lang } from "./store.types"
+import { Dispatch } from "react"
 
 export interface ISocial extends IMenu {
   items: ISocialItem[]
@@ -8,6 +9,7 @@ export interface ISocial extends IMenu {
 
 export interface IMenu {
   status: boolean
+  dispatch?: Dispatch<any>
 }
 
 export interface IMenuProps extends IMenu {

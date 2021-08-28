@@ -1,5 +1,5 @@
 import { Lang } from "./store.types"
-
+import { Dispatch } from "react"
 export interface IHelmet {
   lang: Lang
 }
@@ -21,4 +21,8 @@ export interface IBackground {
 export interface ISocialItem {
   id: "vk" | "insta" | "telegram" | "github" | string
   link: string
+}
+
+export interface ILang {
+  dispatch: Dispatch<any> | null
 }
