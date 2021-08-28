@@ -53,6 +53,13 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "@types/react-intl": "^3.0.0",
+    "@types/react-router": "^5.1.16",
+    "@types/react-router-dom": "^5.1.8",
+    "connected-react-router": "^6.9.1",
+    "gh-pages": "^3.2.3",
+    "react-intl": "^5.20.10",
+    "react-router": "^5.2.1",
+    "react-router-dom": "^5.2.1"
   }
 }
