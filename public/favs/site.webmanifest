@@ -1,21 +1,21 @@
 {
-  "name": "Web-development",
-  "short_name": "anclaev",
-  "start_url": "../index.html",
+  "name": "Anclaev",
+  "short_name": "Anclaev",
   "icons": [
     {
-      "src": "/favs/android-chrome-192x192.png",
+      "src": "/favs/android-chrome-192x192.png?v=1.0",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/favs/android-chrome-512x512.png",
+      "src": "/favs/android-chrome-512x512.png?v=1.0",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "theme_color": "#333333",
-  "background_color": "#333333",
+  "theme_color": "#2c2c2c",
+  "background_color": "#2c2c2c",
+  "start_url": "https://anclaev.com",
   "display": "standalone"
 }

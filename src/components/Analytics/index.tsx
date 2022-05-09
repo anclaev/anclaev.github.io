@@ -2,7 +2,7 @@ import { YMInitializer } from 'react-yandex-metrika'
 
 const Analytics = () => (
   <YMInitializer
-    accounts={[82985923]}
+    accounts={[88737698]}
     options={{ clickmap: true, trackLinks: true, accurateTrackBounce: true }}
   />
 )

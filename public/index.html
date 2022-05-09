@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="msapplication-TileColor" content="#333333" />
-    <meta name="msapplication-config" content="/favs/browserconfig.xml" />
-    <meta name="theme-color" content="#333333" />
+
+    <meta name="apple-mobile-web-app-title" content="Anclaev" />
+    <meta name="application-name" content="Anclaev" />
+    <meta name="msapplication-TileColor" content="#2c2c2c" />
+    <meta name="msapplication-config" content="/favs/browserconfig.xml?v=1.0" />
+    <meta name="theme-color" content="#2c2c2c" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="anclaev" />
-    <meta property="og:title" content="anclaev" />
-    <meta property="og:url" content="https://ancla.pro/" />
+    <meta property="og:site_name" content="Anclaev" />
+    <meta property="og:title" content="Anclaev" />
+    <meta property="og:url" content="https://anclaev.com/" />
     <meta property="og:image" content="/media/og.jpg" />
     <meta property="og:image:width" content="968" />
     <meta property="og:image:height" content="504" />
@@ -18,40 +21,45 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/favs/apple-touch-icon.png"
+      href="/favs/apple-touch-icon.png?v=1.0"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/favs/favicon-32x32.png"
+      href="/favs/favicon-32x32.png?v=1.0"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/favs/favicon-16x16.png"
+      href="/favs/favicon-16x16.png?v=1.0"
     />
-    <link rel="manifest" href="/favs/site.webmanifest" />
-    <link rel="mask-icon" href="/favs/safari-pinned-tab.svg" color="#333333" />
-    <link rel="shortcut icon" href="/favs/favicon.ico" />
+    <link rel="manifest" href="/favs/site.webmanifest?v=1.0" />
+    <link
+      rel="mask-icon"
+      href="/favs/safari-pinned-tab.svg?v=1.0"
+      color="#2c2c2c"
+    />
+
+    <link rel="shortcut icon" href="/favs/favicon.ico?v=1.0" />
   </head>
   <body>
     <div class="app"></div>
     <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
           navigator.serviceWorker
-            .register("service-worker.js")
+            .register('service-worker.js')
             .then(
               function (registration) {
                 console.log(
-                  "Service worker registration successful with scope: ",
+                  'Service worker registration successful with scope: ',
                   registration.scope
                 )
               },
               function (err) {
-                console.log("Service worker registration failed: ", err)
+                console.log('Service worker registration failed: ', err)
               }
             )
             .catch(function (err) {
@@ -59,7 +67,7 @@
             })
         })
       } else {
-        console.log("Service worker is not supported")
+        console.log('Service worker is not supported')
       }
     </script>
   </body>
