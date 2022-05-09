@@ -1,0 +1,15 @@
+version: '2'
+services:
+  web:
+    container_name: anclaev-com
+    image: anclaev-com:latest
+    restart: always
+    networks:
+      external:
+        ipv4_address: 172.30.128.1
+
+networks:
+  external:
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
