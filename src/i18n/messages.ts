@@ -2,7 +2,7 @@ import LOCALES from './locales'
 
 const messages = {
   [LOCALES.ENGLISH]: {
-    helmet_title: 'Full-stack | anclaev',
+    helmet_title: 'Fullstack | anclaev',
     helmet_description: 'Developing progressive web applications',
     helmet_keywords: 'web development, websites, web design, devops, fullstack',
     helmet_og: 'Web design',
@@ -13,7 +13,7 @@ const messages = {
     menu_content: 'And what will happen here, I have not yet figured out.',
   },
   [LOCALES.RUSSIAN]: {
-    helmet_title: 'Full-stack | anclaev',
+    helmet_title: 'Fullstack | anclaev',
     helmet_description: 'Разработка прогрессивных веб-приложений',
     helmet_keywords: 'веб-разработка, сайты, веб-дизайн, devops, fullstack',
     helmet_og: 'Веб-дизайн',
