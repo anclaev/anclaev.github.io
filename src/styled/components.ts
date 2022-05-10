@@ -255,3 +255,108 @@ export const StyledLang = styled.div`
     }
   }
 `
+
+export const StyledProjects = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5em;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    margin-top: 0;
+  }
+`
+
+export const StyledProject = styled.div`
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  &,
+  & > div {
+    display: flex;
+  }
+
+  & > img {
+    max-width: 500px;
+    user-select: none;
+    flex-grow: 1;
+    border-radius: 20px;
+    margin-bottom: 0.7em;
+  }
+
+  & > div {
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  & > div > h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin: 0.5em 0;
+  }
+
+  & > div > p {
+    margin: 0;
+    text-align: center;
+  }
+
+  & > div > ul {
+    padding: 0;
+    display: grid;
+    margin: 1.5em 0;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-gap: 1em 3em;
+    flex-grow: 1;
+  }
+
+  & > div > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+  }
+
+  & > div > ul > li > a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+
+  & > div > ul > li > a:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background: black;
+    transition: 0.2s;
+  }
+
+  & > div > ul > li > a:hover:after {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 992px) {
+    & {
+      justify-content: center;
+    }
+
+    & > img {
+      margin-bottom: 1.5em;
+    }
+  }
+`

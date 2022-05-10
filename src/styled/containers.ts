@@ -87,13 +87,18 @@ export const StyledMenu = styled.div<IMenu>`
   }
 
   & > div {
-    position: relative;
+    // position: relative;
   }
 
   & > div {
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
     padding: 7rem 12.5%;
+  }
+
+  & > div::-webkit-scrollbar {
+    display: none;
   }
 
   @media (max-width: 992px) {
@@ -105,8 +110,14 @@ export const StyledMenu = styled.div<IMenu>`
 
     & > div {
       flex: 1 1;
-      justify-content: center;
-      padding: 1.6rem 1.25rem;
+      // justify-content: center;
+      padding: 3rem 1.25rem;
+    }
+
+    & > div > h2 {
+      font-size: 1em;
+      margin-bottom: 1em;
+      min-height: 40px;
     }
   }
 `
