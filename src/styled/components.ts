@@ -248,7 +248,7 @@ export const StyledLang = styled.div`
     }
   }
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 992px) {
     & {
       right: calc(2.333rem - 18px);
       bottom: calc(1.917rem - 25px);

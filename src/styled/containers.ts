@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import { IMenu } from "../types/containers.types"
+import { IMenu } from '../types/containers.types'
 
 export const StyledSocial = styled.div<IMenu>`
   position: absolute;
@@ -13,11 +13,19 @@ export const StyledSocial = styled.div<IMenu>`
   z-index: 7;
 
   & path {
-    fill: ${(props) => (props.status ? "#000" : "#fff")} !important;
+    fill: ${(props) => (props.status ? '#000' : '#fff')} !important;
   }
 
   @media (max-width: 992px) {
-    display: none;
+    flex-direction: row;
+    justify-content: center;
+
+    left: calc(2.333rem - 18px);
+    right: calc(2.333rem - 18px);
+
+    bottom: calc(1.917rem - 25px);
+
+    z-index: 5;
   }
 `
 
@@ -67,7 +75,7 @@ export const StyledMenu = styled.div<IMenu>`
   left: 0;
 
   width: 100%;
-  height: ${(props) => (props.status ? "100%" : 0)};
+  height: ${(props) => (props.status ? '100%' : 0)};
 
   transition: 0.7s;
   background: #fff;
