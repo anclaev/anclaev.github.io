@@ -1,8 +1,8 @@
 import { APP_SELECT_LANG, APP_CHANGE_CURSOR } from '../actions/types.action'
-import { AppState, AppAction } from '../../types/store.types'
+import { AppState, AppAction, Lang } from '../../types/store.types'
 
 const initialState: AppState = {
-  lang: window.navigator.language.substr(0, 2) === 'ru' ? 'ru' : 'en',
+  lang: localStorage.getItem('lang') as Lang || 'en',
   cursor: false,
 }
 
